@@ -1,0 +1,59 @@
+## Ignore Visual Studio temporary files, build results, and user-specific files
+
+# Build results
+bin/
+obj/
+[Ll]og/
+*.log
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio files
+.vs/
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# ASP.NET Core secrets
+secrets.json
+
+# Environment files
+.env
+*.env
+
+# User-specific files and configurations
+*.dbmdl
+*.pfx
+*.publishsettings
+
+# Entity Framework Core migrations & tools (if using SQLite or local DBs)
+*.db
+*.sqlite
+
+# Dependency directories
+node_modules/
+
+# Auto-generated files
+Generated_Code/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Backup & archive files
+*.bak
+*.zip
+*.tar.gz
+*.rar
+
+# Others
+_ReSharper*/
+*~*
