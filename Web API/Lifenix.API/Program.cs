@@ -1,16 +1,39 @@
+using Lifenix.API.Data;
+using Lifenix.API.Data.Common;
+using Lifenix.API.Data.Common.Repositories;
+using Lifenix.API.Data.Models;
+using Lifenix.API.Data.Repositories;
+using Lifenix.API.Data.Seeding;
+using Lifenix.API.Services;
+using Lifenix.API.Services.Interfaces;
+using Lifenix.API.Services.Mapping;
+using Lifenix.API.Web.DTOs;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.DataProtection.KeyManagement;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Reflection;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IAuthService, AuthService>();
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddIdentity<ApplicationUser, ApplicationRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.AddScoped(typeof(IDeletableEntityRepository<>), typeof(EfDeletableEntityRepository<>));
+builder.Services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
+builder.Services.AddScoped<IDbQueryRunner, DbQueryRunner>();
 
 builder.Services.AddCors(option =>
 {
@@ -43,7 +66,17 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+
 var app = builder.Build();
+
+using (var serviceScope = app.Services.CreateScope())
+{
+    var dbContext = serviceScope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    dbContext.Database.Migrate();
+    new ApplicationDbContextSeeder().SeedAsync(dbContext, serviceScope.ServiceProvider).GetAwaiter().GetResult();
+}
+
+AutoMapperConfig.RegisterMappings(typeof(ErrorViewModel).GetTypeInfo().Assembly);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
