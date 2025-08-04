@@ -1,5 +1,6 @@
 ﻿namespace Lifenix.API.Services
 {
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
     using Lifenix.API.Data.Models;
@@ -30,6 +31,27 @@
 
         public async Task<AuthResponseDto> RegisterAsync(RegisterDto model)
         {
+            var existingEmail = await this.userManager.FindByEmailAsync(model.Email);
+            var existingUsername = await this.userManager.FindByNameAsync(model.Username);
+
+            if (existingEmail != null)
+            {
+                return new AuthResponseDto
+                {
+                    IsAuthSuccessful = false,
+                    Errors = new List<string> { "Email is already registered." },
+                };
+            }
+
+            if (existingUsername != null)
+            {
+                return new AuthResponseDto
+                {
+                    IsAuthSuccessful = false,
+                    Errors = new List<string> { "Username is already taken." },
+                };
+            }
+
             var user = new ApplicationUser
             {
                 UserName = model.Username,
