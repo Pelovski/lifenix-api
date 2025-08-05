@@ -24,9 +24,42 @@
             this.jwtTokenService = jwtTokenService;
         }
 
-        public Task<AuthResponseDto> LoginAsync(LoginDto model)
+        public async Task<AuthResponseDto> LoginAsync(LoginDto model)
         {
-            throw new System.NotImplementedException();
+            var user = await this.userManager.FindByEmailAsync(model.Email);
+
+            if (user == null)
+            {
+                return new AuthResponseDto
+                {
+                    IsAuthSuccessful = false,
+                    Errors = new List<string> { "Invalid email or password." },
+                };
+            }
+
+            var result = await this.signInManager.PasswordSignInAsync(user.UserName, model.Password, false, false);
+
+            if (!result.Succeeded)
+            {
+                return new AuthResponseDto
+                {
+                    IsAuthSuccessful = false,
+                    Errors = new List<string> { "Invalid email or password." },
+                };
+            }
+
+            var roles = await this.userManager.GetRolesAsync(user);
+            var token = this.jwtTokenService.GenerateToken(user, roles);
+
+            return new AuthResponseDto
+            {
+                IsAuthSuccessful = true,
+                Token = token,
+                UserId = user.Id,
+                Username = user.UserName,
+                Roles = roles,
+                Errors = null,
+            };
         }
 
         public async Task<AuthResponseDto> RegisterAsync(RegisterDto model)

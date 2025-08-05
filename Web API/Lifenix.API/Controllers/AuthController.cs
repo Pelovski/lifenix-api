@@ -15,6 +15,20 @@ namespace Lifenix.API.Controllers
             this.authService = authService;      
         }
 
+        [HttpPost("login")]
+        public async Task<IActionResult> Login ([FromBody] LoginDto loginDto)
+        {
+            var result = await this.authService.LoginAsync(loginDto);
+
+            if (!result.IsAuthSuccessful)
+            {
+                return BadRequest(result.Errors);
+            }
+
+            return Ok(result);
+        }
+
+
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto registerDto) 
         {
