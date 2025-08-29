@@ -18,7 +18,6 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -49,8 +48,8 @@ builder.Services.AddCors(option =>
         {
             policy.WithOrigins("http://localhost:4200")
             .AllowAnyHeader()
-            .AllowAnyMethod();
-
+            .AllowAnyMethod()
+            .AllowCredentials();
         });
 });
 
@@ -70,6 +69,19 @@ builder.Services.AddAuthentication(options =>
         ValidIssuer = builder.Configuration["Jwt:Issuer"],
         ValidAudience = builder.Configuration["Jwt:Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
+    };
+
+    options.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = context => 
+        {
+            if (context.Request.Cookies.ContainsKey("jwt")) 
+            {
+                context.Token = context.Request.Cookies["jwt"];
+            }
+
+            return Task.CompletedTask;
+        }
     };
 });
 

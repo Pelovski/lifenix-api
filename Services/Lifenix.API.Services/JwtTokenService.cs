@@ -38,7 +38,7 @@
             var token = new JwtSecurityToken(
                 issuer: this.configuration["Jwt:Issuer"],
                 audience: this.configuration["Jwt:Audience"],
-                expires: DateTime.UtcNow.AddHours(5),
+                expires: DateTime.UtcNow.AddHours(24),
                 claims: authClaims,
                 signingCredentials: new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256));
 

@@ -19,9 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Data\Lifenix.API.Data.Common\Lifenix.API.Data.Common.csproj" />
-    <ProjectReference Include="..\..\Data\Lifenix.API.Data.Models\Lifenix.API.Data.Models.csproj" />
-    <ProjectReference Include="..\Lifenix.API.Services.Mapping\Lifenix.API.Services.Mapping.csproj" />
+    <ProjectReference Include="..\..\..\Data\Lifenix.API.Data.Models\Lifenix.API.Data.Models.csproj" />
+    <ProjectReference Include="..\..\..\Services\Lifenix.API.Services.Mapping\Lifenix.API.Services.Mapping.csproj" />
   </ItemGroup>
 
 </Project>

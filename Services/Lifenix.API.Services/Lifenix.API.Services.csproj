@@ -9,7 +9,7 @@
     <CodeAnalysisRuleSet>..\..\Rules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <AdditionalFiles Include="..\..\stylecop.json" />
+
   </ItemGroup>
 
   <ItemGroup>
@@ -21,9 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\ASPNET + Angular Project\Web\Lifenix.API.Web.DTOs\Lifenix.API.DTOs.csproj" />
     <ProjectReference Include="..\..\Data\Lifenix.API.Data.Models\Lifenix.API.Data.Models.csproj" />
     <ProjectReference Include="..\..\Data\Lifenix.API.Data\Lifenix.API.Data.csproj" />
+    <ProjectReference Include="..\..\Web API\Lifenix.API.Web.DTOs\Lifenix.API.Web.DTOs\Lifenix.API.DTOs.csproj" />
   </ItemGroup>
 
 </Project>

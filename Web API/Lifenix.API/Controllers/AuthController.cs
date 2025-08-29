@@ -25,6 +25,16 @@ namespace Lifenix.API.Controllers
                 return BadRequest(result.Errors);
             }
 
+            var cookiesOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = true,
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddHours(24),
+            };
+
+            this.Response.Cookies.Append("jwt", result.Token, cookiesOptions);
+
             return Ok(result);
         }
 
