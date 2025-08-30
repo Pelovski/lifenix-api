@@ -1,4 +1,5 @@
 ﻿using Lifenix.API.DTOs.AuthDTOs;
+using Lifenix.API.Services;
 using Lifenix.API.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,10 +10,12 @@ namespace Lifenix.API.Controllers
     public class AuthController: ControllerBase
     {
         private readonly IAuthService authService;
+        private readonly ICookieService cookieService;
 
-        public AuthController(IAuthService authService)
+        public AuthController(IAuthService authService, ICookieService cookieService)
         {
-            this.authService = authService;      
+            this.authService = authService;
+            this.cookieService = cookieService;
         }
 
         [HttpPost("login")]
@@ -25,15 +28,7 @@ namespace Lifenix.API.Controllers
                 return BadRequest(result.Errors);
             }
 
-            var cookiesOptions = new CookieOptions
-            {
-                HttpOnly = true,
-                Secure = true,
-                SameSite = SameSiteMode.Strict,
-                Expires = DateTime.UtcNow.AddHours(24),
-            };
-
-            this.Response.Cookies.Append("jwt", result.Token, cookiesOptions);
+            this.cookieService.SetJwtCookie(Response, result.Token);
 
             return Ok(result);
         }
@@ -48,6 +43,8 @@ namespace Lifenix.API.Controllers
             {
                 return BadRequest(result.Errors);
             }
+
+            this.cookieService.SetJwtCookie(Response, result.Token);
 
             return Ok(result);
         }
