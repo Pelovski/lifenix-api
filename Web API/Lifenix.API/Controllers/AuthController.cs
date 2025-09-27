@@ -1,6 +1,7 @@
 ﻿using Lifenix.API.DTOs.AuthDTOs;
 using Lifenix.API.Services;
 using Lifenix.API.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Lifenix.API.Controllers
@@ -30,7 +31,7 @@ namespace Lifenix.API.Controllers
 
             this.cookieService.SetJwtCookie(Response, result.Token);
 
-            return Ok(result);
+            return Ok(result.IsAuthSuccessful);
         }
 
 
@@ -47,6 +48,22 @@ namespace Lifenix.API.Controllers
             this.cookieService.SetJwtCookie(Response, result.Token);
 
             return Ok(result);
+        }
+
+        [HttpGet("status")]
+        [Authorize]
+        public IActionResult GetStatus()
+        {
+            return Ok();
+        }
+
+        [HttpPost("logout")]
+        [Authorize]
+        public IActionResult Logout()
+        {
+            this.cookieService.RemoveJwtCookie(Response);
+
+            return Ok();
         }
     }
 }

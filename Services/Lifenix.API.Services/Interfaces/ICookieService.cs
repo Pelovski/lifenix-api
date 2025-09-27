@@ -5,5 +5,7 @@
     public interface ICookieService
     {
         void SetJwtCookie(HttpResponse response, string token);
+
+        void RemoveJwtCookie(HttpResponse response);
     }
 }

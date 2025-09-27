@@ -6,6 +6,8 @@
 
     public class CookieService : ICookieService
     {
+        private readonly string jwtTokenKey = "jwt";
+
         // TODO: Make JWT cookie options configurable via appsettings.json
         public void SetJwtCookie(HttpResponse response, string token)
         {
@@ -13,11 +15,21 @@
             {
                 HttpOnly = true,
                 Secure = true,
-                SameSite = SameSiteMode.Strict,
-                Expires = DateTime.UtcNow.AddHours(24),
+                SameSite = SameSiteMode.None,
+                Expires = DateTime.UtcNow.AddHours(1),
             };
 
-            response.Cookies.Append("jwt", token, cookieOptions);
+            response.Cookies.Append(this.jwtTokenKey, token, cookieOptions);
+        }
+
+        public void RemoveJwtCookie(HttpResponse response)
+        {
+           response.Cookies.Delete(this.jwtTokenKey, new CookieOptions
+           {
+               Path = "/",
+               Secure = true,
+               SameSite = SameSiteMode.None,
+           });
         }
     }
 }

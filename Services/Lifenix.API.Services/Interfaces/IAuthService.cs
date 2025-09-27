@@ -8,5 +8,7 @@
         Task<AuthResponseDto> RegisterAsync(RegisterDto model);
 
         Task<AuthResponseDto> LoginAsync(LoginDto model);
+
+        Task LogoutAsync();
     }
 }
