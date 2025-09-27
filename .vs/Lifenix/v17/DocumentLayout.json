@@ -7,20 +7,24 @@
       "RelativeMoniker": "D:0:0:{7225AF20-C199-71FE-6333-4A91D0479CD7}|Web API\\Lifenix.API\\Lifenix.API.csproj|solutionrelative:web api\\lifenix.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7225AF20-C199-71FE-6333-4A91D0479CD7}|Web API\\Lifenix.API\\Lifenix.API.csproj|d:\\pavel\\angular\\lifenix\\asp.net\\lifenix-api\\web api\\lifenix.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7225AF20-C199-71FE-6333-4A91D0479CD7}|Web API\\Lifenix.API\\Lifenix.API.csproj|solutionrelative:web api\\lifenix.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|d:\\pavel\\angular\\lifenix\\asp.net\\lifenix-api\\services\\lifenix.api.services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|solutionrelative:services\\lifenix.api.services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|d:\\pavel\\angular\\lifenix\\asp.net\\lifenix-api\\services\\lifenix.api.services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|solutionrelative:services\\lifenix.api.services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|d:\\pavel\\angular\\lifenix\\asp.net\\lifenix-api\\services\\lifenix.api.services\\cookieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|solutionrelative:services\\lifenix.api.services\\cookieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|d:\\pavel\\angular\\lifenix\\asp.net\\lifenix-api\\services\\lifenix.api.services\\interfaces\\icookieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|solutionrelative:services\\lifenix.api.services\\interfaces\\icookieservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|d:\\pavel\\angular\\lifenix\\asp.net\\lifenix-api\\services\\lifenix.api.services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|solutionrelative:services\\lifenix.api.services\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|d:\\pavel\\angular\\lifenix\\asp.net\\lifenix-api\\services\\lifenix.api.services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|solutionrelative:services\\lifenix.api.services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,51 +39,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ICookieService.cs",
-              "DocumentMoniker": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\Interfaces\\ICookieService.cs",
-              "RelativeDocumentMoniker": "Services\\Lifenix.API.Services\\Interfaces\\ICookieService.cs",
-              "ToolTip": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\Interfaces\\ICookieService.cs",
-              "RelativeToolTip": "Services\\Lifenix.API.Services\\Interfaces\\ICookieService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T18:26:25.726Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "Services\\Lifenix.API.Services\\Interfaces\\IAuthService.cs",
               "ToolTip": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\Interfaces\\IAuthService.cs",
               "RelativeToolTip": "Services\\Lifenix.API.Services\\Interfaces\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T14:19:38.836Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CookieService.cs",
-              "DocumentMoniker": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\CookieService.cs",
-              "RelativeDocumentMoniker": "Services\\Lifenix.API.Services\\CookieService.cs",
-              "ToolTip": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\CookieService.cs",
-              "RelativeToolTip": "Services\\Lifenix.API.Services\\CookieService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-26T13:30:41.263Z",
+              "WhenOpened": "2025-09-27T16:33:44.356Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AuthService.cs",
               "DocumentMoniker": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\AuthService.cs",
               "RelativeDocumentMoniker": "Services\\Lifenix.API.Services\\AuthService.cs",
               "ToolTip": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\AuthService.cs",
               "RelativeToolTip": "Services\\Lifenix.API.Services\\AuthService.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAwwHcAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAwwHoAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-17T06:11:50.009Z",
+              "WhenOpened": "2025-09-27T14:46:23.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CookieService.cs",
+              "DocumentMoniker": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\CookieService.cs",
+              "RelativeDocumentMoniker": "Services\\Lifenix.API.Services\\CookieService.cs",
+              "ToolTip": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\CookieService.cs",
+              "RelativeToolTip": "Services\\Lifenix.API.Services\\CookieService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T14:46:13.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "Services\\Lifenix.API.Services\\JwtTokenService.cs",
+              "ToolTip": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\JwtTokenService.cs",
+              "RelativeToolTip": "Services\\Lifenix.API.Services\\JwtTokenService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T14:44:58.706Z",
               "EditorCaption": ""
             },
             {
@@ -90,9 +96,22 @@
               "RelativeDocumentMoniker": "Web API\\Lifenix.API\\Controllers\\AuthController.cs",
               "ToolTip": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Web API\\Lifenix.API\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Web API\\Lifenix.API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowDQAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAmwGIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-30T05:58:48.451Z",
+              "WhenOpened": "2025-09-27T14:35:39.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Web API\\Lifenix.API\\Program.cs",
+              "RelativeDocumentMoniker": "Web API\\Lifenix.API\\Program.cs",
+              "ToolTip": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Web API\\Lifenix.API\\Program.cs",
+              "RelativeToolTip": "Web API\\Lifenix.API\\Program.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAAF4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-27T14:03:48.941Z",
               "EditorCaption": ""
             }
           ]

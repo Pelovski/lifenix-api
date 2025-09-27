@@ -1,12 +1,13 @@
 ﻿namespace Lifenix.API.Services
 {
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
     using Lifenix.API.Data.Models;
     using Lifenix.API.DTOs.AuthDTOs;
     using Lifenix.API.Services.Interfaces;
     using Microsoft.AspNetCore.Identity;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Security.Claims;
+    using System.Threading.Tasks;
 
     public class AuthService : IAuthService
     {
@@ -117,6 +118,15 @@
                 Username = model.Username,
                 Roles = roles,
             };
+        }
+
+        public async Task<string> GetJwtForExternalUserAsync(ClaimsPrincipal externalUser)
+        {
+            var email = externalUser.FindFirstValue(ClaimTypes.Email);
+            var user = await this.userManager.FindByEmailAsync(email) ?? new ApplicationUser { UserName = email, Email = email };
+            var roles = await this.userManager.GetRolesAsync(user);
+
+            return this.jwtTokenService.GenerateToken(user, roles);
         }
     }
 }

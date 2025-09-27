@@ -1,8 +1,10 @@
 ﻿using Lifenix.API.DTOs.AuthDTOs;
 using Lifenix.API.Services;
 using Lifenix.API.Services.Interfaces;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace Lifenix.API.Controllers
 {
@@ -64,6 +66,33 @@ namespace Lifenix.API.Controllers
             this.cookieService.RemoveJwtCookie(Response);
 
             return Ok();
+        }
+
+        [HttpGet("google-login")]
+        public IActionResult GoogleLogin()
+        {
+            var properties = new AuthenticationProperties
+            {
+                RedirectUri = Url.Action("GoogleResponse")
+            };
+
+            return Challenge(properties, "Google");
+        }
+
+        [HttpGet("google-response")]
+        public async Task<IActionResult> GoogleResponse()
+        {
+            var result = await this.HttpContext.AuthenticateAsync("Google");
+
+            if (!result.Succeeded || result.Principal == null)
+            {
+                return BadRequest("Google authentication failed.");
+            }
+
+            var jwtToken = await this.authService.GetJwtForExternalUserAsync(result.Principal);
+            this.cookieService.SetJwtCookie(Response, jwtToken);
+
+            return this.Redirect("http://localhost:4200/dashboard/");
         }
     }
 }

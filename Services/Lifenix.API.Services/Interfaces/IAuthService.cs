@@ -1,7 +1,8 @@
 ﻿namespace Lifenix.API.Services.Interfaces
 {
-    using System.Threading.Tasks;
     using Lifenix.API.DTOs.AuthDTOs;
+    using System.Security.Claims;
+    using System.Threading.Tasks;
 
     public interface IAuthService
     {
@@ -9,6 +10,6 @@
 
         Task<AuthResponseDto> LoginAsync(LoginDto model);
 
-        Task LogoutAsync();
+        Task<string> GetJwtForExternalUserAsync(ClaimsPrincipal externalUser);
     }
 }

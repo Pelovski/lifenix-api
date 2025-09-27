@@ -8,9 +8,12 @@ using Lifenix.API.Services;
 using Lifenix.API.Services.Interfaces;
 using Lifenix.API.Services.Mapping;
 using Lifenix.API.Web.DTOs;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.Reflection;
 using System.Text;
@@ -58,8 +61,8 @@ builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-.AddJwtBearer(options =>
+}).AddJwtBearer(options =>
+
 {
     options.RequireHttpsMetadata = true;
     options.SaveToken = true;
@@ -84,6 +87,12 @@ builder.Services.AddAuthentication(options =>
             return Task.CompletedTask;
         }
     };
+})
+.AddGoogle("Google", opt =>
+{
+    opt.ClientId = builder.Configuration["Google:ClientId"];
+    opt.ClientSecret = builder.Configuration["Google:ClientSecret"];
+    opt.CallbackPath = "/signin-google";
 });
 
 

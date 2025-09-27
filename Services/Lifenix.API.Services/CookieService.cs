@@ -16,7 +16,7 @@
                 HttpOnly = true,
                 Secure = true,
                 SameSite = SameSiteMode.None,
-                Expires = DateTime.UtcNow.AddHours(1),
+                Expires = DateTime.UtcNow.AddHours(24),
             };
 
             response.Cookies.Append(this.jwtTokenKey, token, cookieOptions);
