@@ -68,25 +68,25 @@ namespace Lifenix.API.Controllers
             return Ok();
         }
 
-        [HttpGet("google-login")]
-        public IActionResult GoogleLogin()
+        [HttpGet("{provider}-login")]
+        public IActionResult ExternalLogin(string provider)
         {
             var properties = new AuthenticationProperties
             {
-                RedirectUri = Url.Action("GoogleResponse")
+                RedirectUri = Url.Action("ExternalResponse", new { provider })
             };
 
-            return Challenge(properties, "Google");
+            return Challenge(properties, provider);
         }
 
-        [HttpGet("google-response")]
-        public async Task<IActionResult> GoogleResponse()
+        [HttpGet("external-response")]
+        public async Task<IActionResult> ExternalResponse(string provider)
         {
-            var result = await this.HttpContext.AuthenticateAsync("Google");
+            var result = await this.HttpContext.AuthenticateAsync(provider);
 
             if (!result.Succeeded || result.Principal == null)
             {
-                return BadRequest("Google authentication failed.");
+                return BadRequest($"{provider} authentication failed.");
             }
 
             var jwtToken = await this.authService.GetJwtForExternalUserAsync(result.Principal);

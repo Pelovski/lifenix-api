@@ -1,3 +1,4 @@
+using Lifenix.API.Common;
 using Lifenix.API.Data;
 using Lifenix.API.Data.Common;
 using Lifenix.API.Data.Common.Repositories;
@@ -88,11 +89,14 @@ builder.Services.AddAuthentication(options =>
         }
     };
 })
-.AddGoogle("Google", opt =>
+.AddGoogle(GlobalConstants.GoogleProvider, opt =>
 {
     opt.ClientId = builder.Configuration["Google:ClientId"];
     opt.ClientSecret = builder.Configuration["Google:ClientSecret"];
-    opt.CallbackPath = "/signin-google";
+  
+}).AddFacebook(GlobalConstants.FacebookProvider, opt => {
+    opt.AppId = builder.Configuration["Facebook:AppId"];
+    opt.AppSecret = builder.Configuration["Facebook:AppSecret"];
 });
 
 
