@@ -3,8 +3,23 @@
   "WorkspaceRootPath": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|d:\\pavel\\angular\\lifenix\\asp.net\\lifenix-api\\services\\lifenix.api.services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|solutionrelative:services\\lifenix.api.services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|d:\\pavel\\angular\\lifenix\\asp.net\\lifenix-api\\services\\lifenix.api.services\\emailsenderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|solutionrelative:services\\lifenix.api.services\\emailsenderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7225AF20-C199-71FE-6333-4A91D0479CD7}|Web API\\Lifenix.API\\Lifenix.API.csproj|d:\\pavel\\angular\\lifenix\\asp.net\\lifenix-api\\web api\\lifenix.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7225AF20-C199-71FE-6333-4A91D0479CD7}|Web API\\Lifenix.API\\Lifenix.API.csproj|solutionrelative:web api\\lifenix.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|d:\\pavel\\angular\\lifenix\\asp.net\\lifenix-api\\services\\lifenix.api.services\\interfaces\\iemailsenderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7355778E-01DE-856B-5305-6570FABE26BD}|Services\\Lifenix.API.Services\\Lifenix.API.Services.csproj|solutionrelative:services\\lifenix.api.services\\interfaces\\iemailsenderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\herrp\\AppData\\Roaming\\Microsoft\\UserSecrets\\be81ca82-2494-4cfd-98f1-45db7ee4abe4\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,12 +34,60 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\Lifenix.API.Services\\AuthService.cs",
+              "ToolTip": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\AuthService.cs",
+              "RelativeToolTip": "Services\\Lifenix.API.Services\\AuthService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T08:09:37.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\herrp\\AppData\\Roaming\\Microsoft\\UserSecrets\\be81ca82-2494-4cfd-98f1-45db7ee4abe4\\secrets.json",
+              "ToolTip": "C:\\Users\\herrp\\AppData\\Roaming\\Microsoft\\UserSecrets\\be81ca82-2494-4cfd-98f1-45db7ee4abe4\\secrets.json",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-28T18:13:28.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IEmailSenderService.cs",
+              "DocumentMoniker": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\Interfaces\\IEmailSenderService.cs",
+              "RelativeDocumentMoniker": "Services\\Lifenix.API.Services\\Interfaces\\IEmailSenderService.cs",
+              "ToolTip": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\Interfaces\\IEmailSenderService.cs",
+              "RelativeToolTip": "Services\\Lifenix.API.Services\\Interfaces\\IEmailSenderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T17:57:43.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmailSenderService.cs",
+              "DocumentMoniker": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\EmailSenderService.cs",
+              "RelativeDocumentMoniker": "Services\\Lifenix.API.Services\\EmailSenderService.cs",
+              "ToolTip": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Services\\Lifenix.API.Services\\EmailSenderService.cs",
+              "RelativeToolTip": "Services\\Lifenix.API.Services\\EmailSenderService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-28T17:57:18.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Web API\\Lifenix.API\\Program.cs",
               "RelativeDocumentMoniker": "Web API\\Lifenix.API\\Program.cs",
               "ToolTip": "D:\\Pavel\\Angular\\LifeNix\\ASP.NET\\lifenix-api\\Web API\\Lifenix.API\\Program.cs",
               "RelativeToolTip": "Web API\\Lifenix.API\\Program.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAAwwGsAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-27T14:03:48.941Z",
               "EditorCaption": ""

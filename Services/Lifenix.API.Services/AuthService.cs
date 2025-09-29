@@ -1,13 +1,13 @@
 ﻿namespace Lifenix.API.Services
 {
-    using Lifenix.API.Data.Models;
-    using Lifenix.API.DTOs.AuthDTOs;
-    using Lifenix.API.Services.Interfaces;
-    using Microsoft.AspNetCore.Identity;
     using System.Collections.Generic;
     using System.Linq;
     using System.Security.Claims;
     using System.Threading.Tasks;
+    using Lifenix.API.Data.Models;
+    using Lifenix.API.DTOs.AuthDTOs;
+    using Lifenix.API.Services.Interfaces;
+    using Microsoft.AspNetCore.Identity;
 
     public class AuthService : IAuthService
     {
